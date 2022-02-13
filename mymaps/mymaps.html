@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maps</title>
+    <link rel="stylesheet" href="../css.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+</head>
+
+<body onload="document.getElementById('city1').click();">
+    <div class="navbar navbar-dark bg-dark smart-scroll">
+        <h1 class="display-4 text-white">Maps</h1>
+        <div>
+            <a href="javascript:void(0)" onclick="mapMenu('mapContainer1', 'mapArrow1', 'city2')" class="btn btn-primary" id="city1"><p>This is Brno</p><i id="mapArrow1" class="material-icons col-md-3">keyboard_arrow_down</i></a>
+            <a href="javascript:void(0)" onclick="mapMenu('mapContainer2', 'mapArrow2', 'city1')" class="btn btn-primary" id="city2"><p>This is Leeds</p><i id="mapArrow2" class="material-icons col-md3">keyboard_arrow_down</i></a>
+        </div>
+    </div>
+<div class="mapContainer container col-md-12" id="mapContainer1">
+    <div class="map" id="map1" class="border-top map-container-google-1"></div>
+</div>
+    
+
+<div class="mapContainer container col-md-12" id="mapContainer2">
+    <div class="map" id="map2" class="border-top map-container-google-1"></div>
+</div>
+
+    <script>
+    // Called by Google Maps API
+    function initMaps() {
+        fetch('http://localhost/dsa-twin-cities/mymaps/readCities.php')
+            .then(function (resp) { // fetching list of cities from DB
+                return resp.json();
+            })
+            .then(function (data) {
+                console.log(data);
+                for (var index in data) {
+                    console.log(data[index]);
+                    initMap(data[index]); // calling to create maps
+                }
+            });
+    }
+
+    // Create maps
+    function initMap(city) {
+        console.log(city);
+        // Map options
+        var options = {
+            zoom: 11,
+            center: {
+                lat: parseFloat(city["city_lat"]),
+                lng: parseFloat(city["city_long"])
+            }
+        }
+
+        // Map introduction
+        document.getElementById('city' + city["city_id"]).innerHTML = city["city_name"]+ "<i id='mapArrow1' class='material-icons'>keyboard_arrow_down</i>";
+
+        // New map
+        var map = new google.maps.Map(document.getElementById('map' + city["city_id"]), options); // adding map to appropriate div
+
+        // Map
+        let myMap = new Map()
+
+        fetch('/mymaps/readPlaces.php?id=' + city["city_id"]) // fetching list of places from DB
+            .then(function (resp) {
+                return resp.json();
+            })
+            .then(function (data) {
+                console.log(data);
+                for (var index in data) {
+                    console.log(data[index]);
+                    addMarker(data[index]); // calling to add marker
+                }
+            });
+
+        // Add markers    
+        function addMarker(props) {
+            var marker = new google.maps.Marker({
+                position: {
+                    lat: parseFloat(props["place_lat"]),
+                    lng: parseFloat(props["place_long"])
+                },
+                map: map,
+            });
+
+            // Check for custom icon //<--- NOT WORKING YET
+            if (props["iconImage"]) {
+                marker.setIcon(props.iconImage); // set icon
+            }
+
+            // Check for content
+            if (props["place_name"]) {
+                // Window that is going be displayed upon clicking
+                var infoWindow = new google.maps.InfoWindow({
+                    content: props["place_name"]
+                });
+                marker.addListener('mouseover', function () { // Adding listener to the marker
+                    infoWindow.open(map, marker);
+                });
+                marker.addListener('mouseout', function () { // Adding another listener to the marker
+                    infoWindow.close(map, marker);
+                });
+
+                myMap.set(marker, props["place_id"]);
+                marker.addListener('click', function () {
+                    var tag = myMap.get(marker);
+                    fetch('/mymaps/readPlaceDetails.php?id=' + tag) // fetching list of place details
+                        .then(function (resp) {
+                            return resp.json();
+                        })
+                        .then(function (data) {
+                            console.log(data);
+                            // detailed window
+                            var contentString = '<h3>' + data[0]["place_name"] + '</h3><p>' // build up contents
+                                +
+                                data[0]["description"] + '</p><p><a href=' +
+                                data[0]["wplink"] + '>Wikipedia Link</a></p><p><img src=' +
+                                data[0]["wpimg"] + '></p>';
+                            var detailInfoWindow = new google.maps.InfoWindow({ // write contents
+                                content: contentString
+                            });
+                            detailInfoWindow.open(map, marker); // display window
+                        });
+                });
+            }
+        }
+
+
+    }
+    </script>
+    <script>
+    </script>
+    <!-- Google Maps API -->
+    <script async src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCrby_X36vVevUsV9TKDVoxqevUkcmK5L0&callback=initMaps"></script>
+    <script src="../js.js"></script>
+</body>
+</html>

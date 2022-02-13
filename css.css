@@ -1,0 +1,194 @@
+/*Adds fonts to css
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400&display=swap');
+*/
+/*----------------------------------- Original/Global CSS code ------------------------------------------------------*/
+
+body {
+    padding: 0;
+    margin: 0;
+    font-size: 16px;
+    font-family: 'Roboto', sans-serif;
+}
+
+input[type=button],
+input[type=submit],
+select {
+    cursor: pointer;
+}
+
+.topright {
+    position: absolute;
+    top: -4px;
+    right: 12px;
+}
+
+td {
+    vertical-align: top;
+}
+
+a {
+    color: #6897BB;
+    font-weight: 500;
+}
+
+figure {
+    display: table;
+    top: -4px;
+    right: 12px;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+figcaption {
+    display: table-caption;
+    position: absolute;
+    top: -4px;
+    right: 12px;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.input-submit {
+    background: #82AB6D;
+    color: #fff;
+    border: 2px solid #eee;
+    border-radius: 20px;
+}
+
+.fill {
+    padding: 1%;
+    background-color: #7E7C7C;
+
+
+}
+
+/*.form-inline {
+    position: fixed;
+    opacity: 1;
+    width: 100vw;
+    background-color: #7E7C7C;
+    top: 0;
+    overflow: hidden;
+    z-index: 2;
+}
+
+.form-inline h3 {
+    display: inline;
+    margin-right: 5px;
+    font-size: 20pt
+}
+*/
+input,
+select,
+textarea {
+    font-size: 1.5em;
+}
+
+/*---------------------------------------- Index Page ----------------------------------------------------------*/
+@media only screen and (width: 375px) {
+    .page {
+        width: 100vw;
+    }
+}
+
+/*--------------------------------------- Weather page ---------------------------------------------------------*/
+
+/*-------------------------------------- RSS Feed page ---------------------------------------------------------*/
+#important .photoGrid {
+    width: 100vw;
+    height: 0%;
+    z-index: 1;
+    position: fixed;
+    left: 0;
+    overflow-x: hidden;
+    transition: 0.5s;
+    background-color: #8f8f8f;
+}
+
+
+i {
+    cursor: pointer;
+    size: 60px;
+    color: black;
+}
+
+#xml-form {
+    height: 0vh;
+    overflow: hidden;
+    transition: 0.5s;
+}
+
+#important .photo {
+    display: inline-block;
+    position: relative;
+    top: 25%;
+    width: auto;
+    margin: 30px;
+}
+
+#important .photo:hover {
+    border-color: black;
+
+}
+
+.places {
+    float: left;
+    width: 100vw;
+    height: 0vh;
+    left: 0;
+    transition: 0.5s;
+    z-index: -1;
+    overflow-x: scroll;
+}
+
+cityInfo {
+    transition: 0.5s;
+}
+
+
+/*--------------------------------------- Photos page ----------------------------------------------------------*/
+
+/*-----------------------------------------News page------------------------------------------------------------*/
+.articleContainer {
+    width: 100vw;
+    height: auto;
+}
+
+.article {
+    display: inline-block;
+    float: left;
+    width: 30vw;
+    position: relative;
+    margin: 1vw;
+    border-style: groove;
+    background-color: coral;
+}
+
+.article h3 {
+    padding: 0;
+    margin-top: 0;
+}
+
+/*---------------------------------------- Maps Page ------------------------------------------------------------*/
+.mapContainer {
+    height: 0vh;
+    width: 100vw;
+    position: absolute;
+}
+
+.map {
+    width: inherit;
+    height: inherit;
+    transition: 0.5s;
+}
+
+
+img {
+    width: 200px;
+}
+
+@media only screen and (max-width: 600px) {
+    body {
+        background-color: lightblue;
+    }
+}

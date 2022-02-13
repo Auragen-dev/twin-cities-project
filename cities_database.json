@@ -1,0 +1,109 @@
+[{
+  "_id": {
+    "$oid": "605b85f5f728c27e92d3e2ff"
+  },
+  "Place Name": "Leeds Town Hall",
+  "Category": "Music Venue, City Hall",
+  "Place Capacity": "1550",
+  "Place Latitude": "-1.54976",
+  "Place Longitude": "53.80009"
+},{
+  "_id": {
+    "$oid": "605b869af728c27e92d3e300"
+  },
+  "Place Name": "Elland Road",
+  "Category": "Stadium",
+  "Place Capacity": "1550",
+  "Place Latitude": "-1.57204",
+  "Place Longitude": "53.77831"
+},{
+  "_id": {
+    "$oid": "605b871ff728c27e92d3e301"
+  },
+  "Place Name": "The Tetley",
+  "Category": "Art Gallery",
+  "Place Capacity": "40374",
+  "Place Latitude": "-1.53972",
+  "Place Longitude": "53.79218"
+},{
+  "_id": {
+    "$oid": "605b87e6f728c27e92d3e302"
+  },
+  "Place Name": "O2 Academy Leeds",
+  "Category": "Musice Venue, Stadium",
+  "Place Capacity": "2300",
+  "Place Latitude": "-1.54721",
+  "Place Longitude": "53.80237"
+},{
+  "_id": {
+    "$oid": "605b8d34f728c27e92d3e303"
+  },
+  "Place Name": "Harewood House",
+  "Category": "Cultural Heritage Site",
+  "Place Capacity": "150",
+  "Place Latitude": "-1.52833",
+  "Place Longitude": "53.89696"
+},{
+  "_id": {
+    "$oid": "605b9804f728c27e92d3e304"
+  },
+  "Place Name": "Kirkstall Abbey",
+  "Category": "Cultural Heritage Site, Museum",
+  "Place Capacity": "500",
+  "Place Latitude": "-1.60671",
+  "Place Longitude": "53.82115"
+},{
+  "_id": {
+    "$oid": "605b99c9f728c27e92d3e305"
+  },
+  "Place Name": "Cathedral of St. Peter and St. Paul",
+  "Category": "Cathedral",
+  "Place Capacity": "3000",
+  "Place Latitude": "16.60731",
+  "Place Longitude": "49.19112'"
+},{
+  "_id": {
+    "$oid": "605b9a43f728c27e92d3e306"
+  },
+  "Place Name": "Villa Tugendhat",
+  "Category": "Cultural Heritage Site ",
+  "Place Capacity": "30",
+  "Place Latitude": "16.61583",
+  "Place Longitude": "49.20722"
+},{
+  "_id": {
+    "$oid": "605b9ab9f728c27e92d3e307"
+  },
+  "Place Name": "Spilberk Castle",
+  "Category": "Castle",
+  "Place Capacity": "1500",
+  "Place Latitude": "16.59891",
+  "Place Longitude": "49.19428"
+},{
+  "_id": {
+    "$oid": "605b9c14f728c27e92d3e308"
+  },
+  "Place Name": "Brno Technical Museum",
+  "Category": "Museum",
+  "Place Capacity": "800",
+  "Place Latitude": "16.58138",
+  "Place Longitude": "49.22805"
+},{
+  "_id": {
+    "$oid": "605b9cbaf728c27e92d3e309"
+  },
+  "Place Name": "Brno Observatory and Planetarium",
+  "Category": "Planetarium",
+  "Place Capacity": "150",
+  "Place Latitude": "16.58381",
+  "Place Longitude": "49.20461"
+},{
+  "_id": {
+    "$oid": "605b9d53f728c27e92d3e30a"
+  },
+  "Place Name": "Zoo Brno",
+  "Category": "Zoo",
+  "Place Capacity": "2500",
+  "Place Latitude": "16.53344",
+  "Place Longitude": "49.23008"
+}]

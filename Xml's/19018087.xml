@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<individual_metafile xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="ind_schema.xsd">
+<!--
+ This file is an example of a valid individual metadata file. 
+    Use this example file as a template and fill with your own data 
+    validating as you go along using Oxygen or some other schema aware editor 
+-->
+<group id="U"/>
+<student id="19018087"/>
+<!--
+- List of one or more group components that you contributed to 
+-->
+<component type="Build and integrate a comments widget using local data and the Twitter API">
+<description>
+Build and integrate a comments widget using local data and use the Twitter API to pull and display tweets, getting tweets about our twin cities.
+</description>
+<problems>
+
+</problems>
+<solutions>
+    
+</solutions>
+<hours_effort>15</hours_effort>
+<technologies>
+<tech>php</tech>
+<tech>json</tech>
+<tech>html5</tech>
+<tech>mysql</tech>
+</technologies>
+<source_files>
+<file>
+<name>[name of file]</name>
+<purpose>[what does it do?]</purpose>
+</file>
+<file>
+<name>[name of file]</name>
+<purpose>[what does it do?]</purpose>
+</file>
+</source_files>
+</component>
+<security_discussion>
+The four attributes I will be focusing on are 
+
+</security_discussion>
+<individual_comment>
+The project was:
+</individual_comment>
+</individual_metafile>
+<!-- DSA Individual Metadata File Example, 2020-1 -->
+<!-- author: prakash.chatterjee@uwe.ac.uk -->

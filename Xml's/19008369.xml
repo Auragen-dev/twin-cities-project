@@ -1,0 +1,46 @@
+<individual_metafile xsi:noNamespaceSchemaLocation="ind_schema.xsd">
+<group id="U"/>
+<student id="19008369"/>
+<component type="Build and integrate a photo widget">
+<description>
+Using the Flickr API to grab photos relevant to Leeds and Brno (twinned cities/towns) and integrate the component with the main application. Also add an option to upload your own images.
+</description>
+<problems>
+Only using the correct licenced photos, for example, photos with a creative commons licence.
+Cache
+Getting used to Flickr, most examples used python and I wanted to stick with PHP, and getting used to grabbing information.
+If you uploaded an image, you would get stuck on the uploads page.
+</problems>
+<solutions>
+Adding another button to the form for licensing (changes the call to flickr), to show that our application only uses the correct creative common licenses, but also showing what the output would be if you allowed for any license.
+Trying different ways to cache, using SQL and PHPMyAdmin, using arrays, and also trying to create files to refrence.
+Messing around with Flickr for a few hours, getting outputs as XML (REST), JSON and PHP Serial, and seeing which I liked to work with the most.
+Added a back button to the uploads page, so the user can go back to the main application.
+</solutions>
+<hours_effort>15</hours_effort>
+<technologies>
+<tech>php</tech>
+<tech>json</tech>
+<tech>html5</tech>
+<tech>sql</tech>
+</technologies>
+<source_files>
+<file>
+<name>photos.php</name>
+<purpose>to fetch flickr photos</purpose>
+</file>
+<file>
+<name>RSSFeed.php</name>
+<purpose>main page with embedded photos</purpose>
+</file>
+</source_files>
+</component>
+<security_discussion>
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+</security_discussion>
+<individual_comment>
+This part was harder than I thought it was going to be, as I had to try different ways to pull photos to get the best outcome, meaing I spent a lot of time going backwards and forwards editing little things in the application.
+It took a few weeks to get it working the way I wanted, and that didn't include cache at the time.
+I messed around with caching for weeks, never getting the exect outcome I wanted.
+</individual_comment>
+</individual_metafile>

@@ -1,0 +1,162 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<rss version='2.0'>
+<channel>
+<title>Twin Cities</title>
+<link>http://localhost:8000/cwk/linkDatabase.php</link>
+<description>Twin City Infomation</description>
+<language>en</language>
+<copyright> RSS </copyright>
+<item>
+<city>
+<CityName>Leeds</CityName>
+<CountryName>England</CountryName>
+<Population>793139</Population>
+<CityLat>53.79972</CityLat>
+<CityLong>-1.54917</CityLong>
+<Woeid>UKXX0078</Woeid>
+<Currency>Pound sterling</Currency>
+<Region>Yorkshire and the Humber</Region>
+<TimeZone>UTC+0</TimeZone>
+<Area>551.7</Area>
+<PostalCode>LS</PostalCode>
+</city>
+</item>
+<item>
+<place>
+<PlaceName>Leeds Town Hall</PlaceName>
+<Capacity>1550</Capacity>
+<PlaceLat>53.80009</PlaceLat>
+<PlaceLong>-1.54970</PlaceLong>
+<Category>Music venue</Category>
+<Photo>images/Town_Hall.jpg</Photo>
+</place>
+</item>
+<item>
+<Category>City Hall</Category>
+</item>
+<item>
+<place>
+<PlaceName>Elland Road</PlaceName>
+<Capacity>1550</Capacity>
+<PlaceLat>53.77831</PlaceLat>
+<PlaceLong>-1.57204</PlaceLong>
+<Category>Stadium</Category>
+<Photo>images/Elland_Road.jpg</Photo>
+</place>
+</item>
+<item>
+<place>
+<PlaceName>The Tetley</PlaceName>
+<Capacity>40374</Capacity>
+<PlaceLat>53.79218</PlaceLat>
+<PlaceLong>-1.53972</PlaceLong>
+<Category>Art Gallery</Category>
+<Photo>images/The_Tetley.jpg</Photo>
+</place>
+</item>
+<item>
+<place>
+<PlaceName>O2 Academy Leeds</PlaceName>
+<Capacity>2300</Capacity>
+<PlaceLat>53.80237</PlaceLat>
+<PlaceLong>-1.54721</PlaceLong>
+<Category>Music venue</Category>
+<Photo>images/O2_Academy_Leeds.jpg</Photo>
+</place>
+</item>
+<item>
+<Category>Stadium</Category>
+</item>
+<item>
+<place>
+<PlaceName>Harewood House</PlaceName>
+<Capacity>150</Capacity>
+<PlaceLat>53.89696</PlaceLat>
+<PlaceLong>-1.52833</PlaceLong>
+<Category>Cultural heritage site</Category>
+<Photo>images/Harewood_House.jpg</Photo>
+</place>
+</item>
+<item>
+<place>
+<PlaceName>Kirkstall Abbey</PlaceName>
+<Capacity>500</Capacity>
+<PlaceLat>53.82115</PlaceLat>
+<PlaceLong>-1.60671</PlaceLong>
+<Category>Cultural heritage site</Category>
+<Photo>images/Kirkstall_Abbey.jpg</Photo>
+</place>
+</item>
+<item>
+<Category>Museum</Category>
+</item>
+<item>
+<city>
+<CityName>Brno</CityName>
+<CountryName>Czech Republic</CountryName>
+<Population>579</Population>
+<CityLat>8.74869</CityLat>
+<CityLong>79.90974</CityLong>
+<Woeid>EZXX1255</Woeid>
+<Currency>Czech koruna</Currency>
+<Region>Central Bohemian</Region>
+<TimeZone>UTC+1</TimeZone>
+<Area>230.1</Area>
+<PostalCode>273 54</PostalCode>
+</city>
+</item>
+<item>
+<place>
+<PlaceName>Cathedral of St. Peter and St. Paul</PlaceName>
+<Capacity>3000</Capacity>
+<PlaceLat>49.19112</PlaceLat>
+<PlaceLong>16.60731</PlaceLong>
+<Category>Cathedral</Category>
+<Photo>images/Stpeter_Stpaul.jpg</Photo>
+</place>
+</item>
+<item>
+<place>
+<PlaceName>Villa Tugendhat</PlaceName>
+<Capacity>30</Capacity>
+<PlaceLat>49.20722</PlaceLat>
+<PlaceLong>16.61583</PlaceLong>
+<Category>Cultural heritage site</Category>
+<Photo>images/Villa_Tugendhat.jpg</Photo>
+</place>
+</item>
+<item>
+<place>
+<PlaceName>Spilberk Castle</PlaceName>
+<Capacity>1500</Capacity>
+<PlaceLat>49.19428</PlaceLat>
+<PlaceLong>16.59891</PlaceLong>
+<Category>Castle</Category>
+<Photo>images/Spilberk_Castle.jpg</Photo>
+</place>
+</item>
+<item>
+<place>
+<PlaceName>Brno Observatory and Planetarium</PlaceName>
+<Capacity>150</Capacity>
+<PlaceLat>49.20461</PlaceLat>
+<PlaceLong>16.58381</PlaceLong>
+<Category>Planetarium</Category>
+<Photo>images/planet.jpg</Photo>
+</place>
+</item>
+<item>
+<Category>Observatory</Category>
+</item>
+<item>
+<place>
+<PlaceName>Zoo Brno</PlaceName>
+<Capacity>2500</Capacity>
+<PlaceLat>49.23008</PlaceLat>
+<PlaceLong>16.53344</PlaceLong>
+<Category>Zoo</Category>
+<Photo>images/ZOO_Brno.jpg</Photo>
+</place>
+</item>
+</channel>
+</rss>

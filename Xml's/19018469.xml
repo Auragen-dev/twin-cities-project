@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<individual_metafile xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="ind_schema.xsd">
+    <!--
+ This file is an example of a valid individual metadata file. 
+    Use this example file as a template and fill with your own data 
+    validating as you go along using Oxygen or some other schema aware editor 
+-->
+    <group id="U" />
+    <student id="19018469" />
+    <!--
+- List of one or more group components that you contributed to 
+-->
+    <component type="Refactor the front-end to be responsive">
+        <description>
+            Refactoring the front-end of our application to be responsive. Using a CSS framework, CSS, Javascript and other tools (icon libraries etc.).
+        </description>
+        <problems>
+            1. On the server side there was a many to many issue. Some places had two categories.
+            It was resolved however but it kept printing outside of the "boxes" I set for the place data.
+            
+            2. I originally misread the brief and it turned out I had to make use of a CSS Framework.
+            
+            3. In order to create HTML for the PHP data we made use of 'echo'. However, at times it made it difficult to develop. 
+            For example, getting the quote marks to match up was difficult in areas.
+            Another example being the IDE I was using (Brackets) couldn't tell me what tags were closed by what tags. When run it worked just fine but the IDE didn't understand this.
+        </problems>
+        <solutions>
+            1. The place data was being echoed via a loop. I figured out this second category was being printed on its own on a second loop.
+            So if a place had two categories, it would echo all the data in one loop, loop again and echo the second category without any other data or tags accociated with it.
+            So sort this out I wrote some JavaScript to store the category and re-write the original echoed category with the second category placed in there.
+            
+            2. Since I had experience in bootstrap before I decided to spend a while reading over it and then started redoing the pages mostly from scratch.
+            I kept some of my orignal CSS and JavaScript for things bootstrap couldn't provide. Such as the curtain menu in the RSS page.
+            
+            3. First of all I learned that you can put a php closing tag ('?>') and the HTML will still get printed on each loop. 
+            Then I learned about the =?> tag to put the PHP data in. This made development much easier in general.
+        </solutions>
+        <hours_effort>15</hours_effort>
+        <technologies>
+            <tech>css</tech>
+            <tech>javascript</tech>
+            <tech>html5</tech>
+            <tech>php</tech>
+        </technologies>
+        <source_files>
+            <file>
+                <name>css.css</name>
+                <purpose>Contains the external CSS that wasn't provided by Bootstrap.</purpose>
+            </file>
+            <file>
+                <name>js.js</name>
+                <purpose>Stores some JavaScript functions we needed for some functionallity.</purpose>
+            </file>
+            <file>
+                <name>RSSFeed.php</name>
+                <purpose>Main application file. I made some custom dropdowns to make the data more presentable.</purpose>
+            </file>
+        </source_files>
+    </component>
+    <security_discussion>
+        The four attributes I will be focusing on are Availability, Authenticity, Utility and Integrity
+        With Availability we need to make sure our data sources are accessible by the website as much as possible. While it makes sense to store everything in-house, depending on the use case (such as this website) it would be more practical to reach out to other services. Because there is so much data, and different types of data, we have to deal with, it’s not possible to gather this much data in the time we have to make the website. Especially since other people have already done the hard work for us. We might as well take advantage of that. 
+        
+        With Integrity we should make an effort to minimise Cross Site Scripting (XSS) and SQL Injection where possible as both of these exploits can manipulate the data. XSS alone could jeopardize not only the data the user receives but could also jeopardize the user themselves. We can minimise XSS by escaping/filtering any text input by the user as well as encoding the output of the data. The simplest thing we can do to minimise SQL injection is to, again, escape all the text inputs by the user. We can also setup the SQL to recognise SQL queries and stop processing the query when it pops up.
+        
+        With Authenticity it goes back to Availability where we need to pick our sources carefully. Except this time, it is not to make sure the data is accessible, it is to make sure the data is accurate. For example, it would not make sense to pick a Weather API that can only return the weather of New York when we need the weather data for Leeds. Simple example, but still. We should also need to pick a source that is not compromised by an attacker. In theory they could encode JavaScript into the data that. And since it’s JavaScript, they can make it do anything from changing the data that is shown, or even installing malware on the user’s computer without their knowledge and permission.
+        
+        With Utility we need to make sure that all the other three attributes are ensured. This is because the webpage would not do anything if it had no data to access, it would not make sense to use a website that is compromised and could rick breaking your device and what is the point of using data if that data is not correct or accurate. 
+    </security_discussion>
+    <individual_comment>
+        Going into my individual task, I had a lot of experience with CSS. I loved CSS. I hated JavaScript. I still love CSS but JavaScript has definately grown on me. For some reason I could never get it to work. But during this it was very cooperative.
+    </individual_comment>
+</individual_metafile>
+<!-- DSA Individual Metadata File Example, 2020-1 -->
+<!-- author: prakash.chatterjee@uwe.ac.uk -->

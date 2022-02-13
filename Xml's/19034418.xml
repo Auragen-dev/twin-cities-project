@@ -1,0 +1,33 @@
+<individual_metafile xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="ind_schema.xsd">
+<group id="U"/>
+<student id="19034418"/>
+<component type="Refactor and map to a NoSQL ">
+<description>
+Refactoring the data of Leeds and Brno. Using MongoDB.
+</description>
+<problems>
+The procedure of launching Mongo through terminal is complicated. 
+As it required to run command first then followed by install Mongo Shell and Mongodb Compass.
+</problems>
+<solutions>
+Going step by step and I have to make sure codes run correctly.
+</solutions>
+<hours_effort>10</hours_effort>
+<technologies>
+<tech>json</tech>
+</technologies>
+<source_files>
+<file>
+<name>cities_database.json</name>
+<purpose>In put Twin Cities data both Leeds and Brno then recode them.</purpose>
+</file>
+</source_files>
+</component>
+<security_discussion>
+ The four attributes I will be focusing on are Confidentiality, Integrity, Availability and Utility
+ 
+</security_discussion>
+<individual_comment>
+I found out some parts are challenging to me as I don't have much experience in-depth details. It took me a while to understand how it will works.
+</individual_comment>
+</individual_metafile>

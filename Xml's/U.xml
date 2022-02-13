@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="UTF-8"?>
+ <group_metafile xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="group_schema.xsd">
+<!--
+ The following is the assignment metadata (DO NOT CHANGE) 
+-->
+<module id="UFCFV4-30-2" acronymn="DSA">
+ <title>Data Schemas &amp; Applications</title>
+<year>2020-21</year>
+<hand_in>2021-03-25</hand_in>
+<spec_url>
+https://fetstudy.uwe.ac.uk/~p-chatterjee/2020-21/modules/dsa/assignment/
+</spec_url>
+</module>
+<!-- end of metadata section -->
+<group id="U">
+<member id="19008369" name="Eloise Allen"/>
+<member id="19018087" name="Kristyna Tumova"/>
+<member id="19018469" name="Lewis Ingram"/>
+<member id="19034418" name="Thanyatorn Thaviyonchai"/>
+<workshop>
+<daytime>Tuesday 09:30</daytime>
+<tutor>PC</tutor>
+<tutor>GW</tutor>
+</workshop>
+<component type="Database Design">
+<contributor id="19008369"/>
+<contributor id="19018087"/>
+<description>
+Database called cities_database, which holds our twin cities data. This includes city information, places in the cities information, categories, and photos.
+An ER model was created at the beginning, linking all the tables together and fixing a many to many relationship.
+</description>
+<problems>
+ We chose coventry and lidice as our cities, and we filled out all of coventry's information, before realising that lidice didn't have enough places in it to add to our database, 
+(we wanted 6 places for each city).
+After creating the ER model with all the correct vaules, when creating the database some of the vaule types had to change to fit the vaule better.
+Last minute the map api needed more data in the database.
+</problems>
+<solutions>
+We changed the twin cities to Leeds and Brno, allowing us to have 6 places for each. Since most of our files relating to the database just used $tag to set up the cities, it was easy to change them.
+All vaules were made to have the correct vaule type and the ER model was updated.
+We added the data in, description of the places, wiki link and wiki image link. These are only going to be used for the map api, not the RSS Feed.
+</solutions>
+<hours_effort>10</hours_effort>
+</component>
+<component type="Database Implementation">
+<contributor id="19008369"/>
+<description>
+Creating a php file that connects to the phpmyadmin server, takes the data from it and creates an RSS Feed, linking the database to our main application. Aslo having a file that just displays the databases data, not as RSS.
+</description>
+<problems>
+Since the file that was creating the RSS feed was a php file, I could not use simplexml_load_file. If I used file_get_contents, on the php file that loadsed the RSS, then it did not load the element tags,
+which I needed to format it correctly.
+After sorting out the last problem, I realisedto have the RSS feed up to date, you must load the linkDatabase.php file, which then creates a download called data.rss. You then need to refresh the RSSFeed.php 
+(main application which displays the RSS Feed) again, to update the content to relate to the most update data.rss file.
+</problems>
+<solutions>
+I made the php file (linkDatabase) create a rss file, which I could then use simplexml_load_file, and correctly call each element tag by name. 
+I added buttons to the top of the RSSFeed.php page, one which loaded the linkDatabase.php again, updating the rss file, and another which refreshed the RSSFeed.php, so that it could display the up to date data.
+</solutions>
+<hours_effort>5</hours_effort>
+</component>
+<component type="RSS Feed">
+<contributor id="19008369"/>
+<description>
+A RSS feed of the datasets held in our MySQL database. The data shows all current data regarding our cities and places of interest, held in the database. 
+</description>
+<problems>
+Same problems as database implementation section of this schema, as the database implementaion was just connecting to the database and then creating the .rss file.  
+</problems>
+<solutions>
+Same solutions as database implementation, as it had the same problems as database implementation.
+</solutions>
+<hours_effort>2</hours_effort>
+</component>
+<component type="HTML Design &amp; Markup">
+<contributor id="19008369"/>
+<contributor id="19018469"/>
+<description>
+HTML desgin of the application, and markup. This was mainly forms and linking CSS and Javascript files to make it look good.
+</description>
+<problems>
+Sometimes when the CSS or Javascript files were updated, they would break the HTML forms.
+</problems>
+<solutions>
+Updating the CSS and Javascript files, or removing the parts that made errors and fixing it, or trying to do that CSS or Javascript part again.
+</solutions>
+<hours_effort>3</hours_effort>
+</component>
+<component type="PHP Coding"> 
+<contributor id="19008369"/>
+<contributor id="19018087"/> 
+<contributor id="19034418"/>
+<description>
+PHP coding of the main applicaton and individual work. Creating the connection to the database, processing and displaying the RSS Feed, the weather api, the news api, the map api and refractoring in the code.
+</description>
+<problems>
+Some places in the place table had two categories (our solved many to many), but because of the way we called the data from the database, the second category in the RSS feed kept echoing outside of the boxes our places were in.
+While connecting to a database, PDO technique kept raising access errors.
+</problems>
+<solutions>
+The problem didn't occur when there was no Javascript, so Lewis messed around with his Javascript and got the variable where it was “supposed” to go (next to the first category, to make it look consistent).
+Changed syntax to mysqli syntax instead, fixing the issue.
+</solutions>
+<hours_effort>12</hours_effort>
+</component>
+<component type="Javascript / JSON Coding">
+<contributor id="19018087"/>
+<contributor id="19018469"/>
+<description>
+Javascript design of our whole application; Done as part of an individual component task. And Javascripted used as JSON for apis.
+</description>
+<problems>
+We tried to pass a php variable to JavaScript and run a function. After implementing 3 ways of doing it, it still didn’t work.
+While fetching from another php file that included a DB connection with the appropriate SQL query, the data would often return poorly formatted (json). Once well formatted, it was difficult to extract the right data from the array (json)
+</problems>
+<solutions>
+The 4th attempt worked. Wrote the function at the very start of the document so that the function could be used while the PHP was still generating the HTML.
+The problem was fixed by researching and trying out several methods and techniques to the point where it worked as required.
+Once again, the problem was fixed by researching and trying out several methods and techniques to the point where it worked as required.
+Problem solved by abandoning the tag methods.
+</solutions>
+<hours_effort>6</hours_effort>
+</component>
+<component type="CSS Design">
+<contributor id="19018469"/>
+<contributor id="19008369"/>
+<description>
+CSS design of our whole application; Done as part of an individual component task.
+</description>
+<problems>
+Didn't realise that we were supposed to use a CSS Framework as the individual component.
+</problems>
+<solutions>
+Saved all the old CSS, just in case it would come in handy later, then started new, with a CSS Framework.
+</solutions>
+<hours_effort>6</hours_effort>
+</component>
+<component type="Map">
+<contributor id="19018087"/>
+<description>
+Two maps of our cities (Leeds and Brno) using the Google Mapping API.
+Each map includes six markers - each for one place of interest. Upon hovering over the marker, a little information is displayed in a window - e.g. the name of the place.
+When a marker is clicked, a bigger info window displays including more information about the place - name, description, Wikipedia link, categories, and a picture.
+Every marker also has an appropriate icon based on the category of the place.
+All data is pulled from our DB, using a set of .php files.    
+</description>
+<problems>
+While adding markers to the map using Javascript, we couldn’t figure out a way to distinguish them to further work with each individual marker (e.g. open a info window) - the methods setTag() and getTag() were apparently deleted from latest versions of Google mapping API methods.
+While displaying info windows, the Listeners didn’t work properly - there seemed to be no difference between hover and click.
+While customising icons, they would often be too big, or too small, or blurred, and inconsistent altogether.  
+</problems>
+<solutions>
+Fixed by researching the Google Map Marker and Listener documentation to learn more about how to use them, what parameters are used and how to customise them.
+Almost fixed, but not entirely.   
+</solutions>
+<hours_effort>12</hours_effort>
+</component>
+<component type="XML Configuration File &amp; Schema ">
+<contributor id="19008369"/>
+<contributor id="19018087"/>
+<contributor id="19018469"/>
+<contributor id="19034418"/>
+<description>
+Validating the XML schemas using XSD schemas, and setting up the configuration file.
+</description>
+<problems>
+When saving the XSD and XML schemas, some lines of the code disappeared, coursing errors, and a failure in validation.
+</problems>
+<solutions>
+Talking with Prakash, and finding out lines were missing, so we could then add the lines back in, fixing the issue.   
+</solutions>
+<hours_effort>2</hours_effort>
+</component>
+<component type="Weather">
+<contributor id="19008369"/>
+<description>
+A weather API that generates a display of the current and forecast weather for the Leeds and Brno (our twin cities). 
+</description>
+<problems>
+I didn't understand how to create the 5 day forecast weather, and gave up after awhile.   
+</problems>
+<solutions>
+After learning about xml and how to load it better, I came back to the forecast task and realised it was easy, and I had done a similar task in a workshop.   
+</solutions>
+<hours_effort>2</hours_effort>
+</component>
+</group>
+<application>
+<technologies>
+<tech>php</tech>
+<tech>html5</tech>
+<tech>xml</tech>
+<tech>rss</tech>
+<tech>json</tech>
+<tech>css</tech>
+<tech>javascript</tech>
+<tech>sql</tech>
+</technologies>
+<source_files>
+<file>
+<name>RSSFeed.php</name>
+<purpose>main application file</purpose>
+</file>
+<file>
+<name>cities_database.json</name>
+<purpose>NoSQL Database</purpose>
+</file>
+<file>
+<name>config.php</name>
+<purpose>configuration file</purpose>
+</file>
+<file>
+<name>linkDatabase.php</name>
+<purpose>links the phpmyadmin database</purpose>
+</file>
+<file>
+<name>weather.php</name>
+<purpose>displays twin cities weather</purpose>
+</file>
+<file>
+<name>news.php</name>
+<purpose>displays twin cities news</purpose>
+</file>
+<file>
+<name>css.css</name>
+<purpose>the css</purpose>
+</file>
+<file>
+<name>js.js</name>
+<purpose>the javascript</purpose>
+</file>
+<file>
+<name>mymaps.php</name>
+<purpose>Maps themselves, their functionality, markers, infowindows, etc.s</purpose>
+</file>
+<file>
+<name>readCategories.php</name>
+<purpose>DB connection with SQL query to extract categories from the DB and encode them to JSON</purpose>
+</file>
+<file>
+<name>readPlaceDetails.php</name>
+<purpose>DB connection with SQL query to place details from the DB and encode them to JSON</purpose>
+</file>
+<file>
+<name>readPlaces.php</name>
+<purpose>DB connection with SQL query to extract places from the DB and encode them to JSON</purpose>
+</file>
+</source_files>
+</application>
+<overall_comments>
+The group thought this assignment was okay. Some people found it fun to do; 'CSS has always been very fun and I even got JavaScript to cooperate for once'. 
+Others found it challenging; 'There are some parts displayed differently from Windows'. 
+Definitely learnt a lot of new things - had to research, reuse, try out and test code for the most part. 
+Found the lecture materials quite helpful but unfortunately there wasn't much content on the parts we was doing. 
+Had some previous knowledge of JS, but not to an extent that was actually required to complete the tasks. As far as the PHP goes, the lecture dedicated specifically to PHP made all the difference. 
+Same case with SQL, DB management and connection (phpMyAdmin), ER modelling, and XML. 
+Over all this coursework was challenging, but when we got things to work it was great. We also learnt a range of new stuff, which is cool and will help us with future projects. 
+</overall_comments>
+</group_metafile>
